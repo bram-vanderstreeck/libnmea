@@ -23,6 +23,9 @@
 #ifdef ENABLE_GPGGA
 DECLARE_PARSER_API(gpgga)
 #endif
+#ifdef ENABLE_GNGGA
+DECLARE_PARSER_API(gngga)
+#endif
 #ifdef ENABLE_GPGLL
 DECLARE_PARSER_API(gpgll)
 #endif
@@ -34,6 +37,9 @@ DECLARE_PARSER_API(gpgsv)
 #endif
 #ifdef ENABLE_GPRMC
 DECLARE_PARSER_API(gprmc)
+#endif
+#ifdef ENABLE_GNRMC
+DECLARE_PARSER_API(gnrmc)
 #endif
 #ifdef ENABLE_GPTXT
 DECLARE_PARSER_API(gptxt)
@@ -60,6 +66,9 @@ nmea_load_parsers()
 #ifdef ENABLE_GPGGA
 	PARSER_LOAD(gpgga);
 #endif
+#ifdef ENABLE_GNGGA
+	PARSER_LOAD(gngga);
+#endif
 #ifdef ENABLE_GPGLL
 	PARSER_LOAD(gpgll);
 #endif
@@ -71,6 +80,9 @@ nmea_load_parsers()
 #endif
 #ifdef ENABLE_GPRMC
 	PARSER_LOAD(gprmc);
+#endif
+#ifdef ENABLE_GNRMC
+	PARSER_LOAD(gnrmc);
 #endif
 #ifdef ENABLE_GPTXT
 	PARSER_LOAD(gptxt);
